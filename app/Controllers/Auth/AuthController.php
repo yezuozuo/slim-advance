@@ -16,20 +16,22 @@ use Slim\Http\Response;
 class AuthController extends Controller {
 
     /**
+     * @param Request  $request
      * @param Response $response
      * @return Response
      */
-    public function getSignOut(Response $response) {
+    public function getSignOut(Request $request, Response $response) {
         $this->auth->logout();
 
         return $response->withRedirect($this->router->pathFor('home'));
     }
 
     /**
+     * @param Request  $request
      * @param Response $response
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function getSignIn(Response $response) {
+    public function getSignIn(Request $request, Response $response) {
         return $this->view->render($response, 'auth/signin.twig');
     }
 
@@ -54,10 +56,11 @@ class AuthController extends Controller {
     }
 
     /**
+     * @param Request  $request
      * @param Response $response
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function getSignUp(Response $response) {
+    public function getSignUp(Request $request, Response $response) {
         return $this->view->render($response, 'auth/signup.twig');
     }
 
