@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Sdb;
 /**
  * Class HomeController
  *
@@ -12,6 +13,9 @@ class HomeController extends Controller {
         $this->flash->addMessage('info', 'This is a message');
         $this->flash->addMessage('error', 'This is a message');
 
+        $model = new Sdb();
+        $model->sdb->select('*');
+        $model->sdb->from('user');
         return $this->view->render($response, 'home.twig');
     }
 }

@@ -1,0 +1,6 @@
+{
+  "name": "slim_simple",
+  "dependencies": {
+    "gentelella": "^1.3.0"
+  }
+}

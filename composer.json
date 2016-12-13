@@ -5,7 +5,8 @@
     "slim/flash": "^0.1.0",
     "respect/validation": "^1.0",
     "illuminate/database": "^5.2",
-    "slim/csrf": "^0.6.0"
+    "slim/csrf": "^0.6.0",
+    "vlucas/phpdotenv": "^2.4"
   },
   "autoload": {
     "psr-4": {
